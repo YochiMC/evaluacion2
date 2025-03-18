@@ -1,0 +1,409 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 10px;
+}
+
+/*NAVEGADOR PRINCIPAL*/
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20%;
+    font-size: 13px;
+    color: royalblue;
+}
+
+.nav-header ul{
+    display: flex;
+    gap: 10px;
+}
+
+.nav-header li{
+    list-style: none;
+    margin-right: 10px;
+}
+
+.nav-header a{
+    text-decoration: none;
+    color: royalblue;
+}
+
+.nav-header a:hover{
+    color: deepskyblue;
+}
+
+.bold-li{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/*HEADER*/
+.principal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 70%; 
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc; 
+    border-radius: 3px;
+    width: 25%;
+    overflow: hidden; 
+}
+
+.search-bar input[type="text"] {
+    padding: 8px 12px; 
+    border: none; 
+    outline: none;
+    flex-grow: 1; 
+}
+
+.search-bar button {
+    background-color: navy;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.options button {
+    border: none;
+    cursor: pointer;
+}
+
+.options button:first-child { 
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    background: none; 
+    border: none; 
+    padding: 0; 
+    cursor: pointer;
+}
+
+.options button:first-child:hover {
+    border: 1px solid deepskyblue;
+    color: deepskyblue; 
+    border-radius: 3px; 
+    padding: 2px 5px; 
+}
+
+.options button:nth-child(1) { 
+    background: none;
+    border: none; 
+    padding: 0; 
+    cursor: pointer;
+}
+
+.options button:nth-child(2) { 
+    background: none; 
+    border: none; 
+    padding: 0; 
+    cursor: pointer; 
+}
+
+.options button:nth-child(2) img { 
+    width: 30%;
+}
+
+/*NAV*/
+.nav {
+    background-color: royalblue;
+    display: flex;
+    align-items: center;    
+    height: 40px;
+}
+
+.nav ul {
+    display: flex;
+    height: 100%; 
+    margin-left: 5%;
+}
+
+.nav li {
+    list-style: none;
+    height: 100%; 
+    display: flex; 
+    align-items: center; 
+    transition: background-color 0.3s ease;
+}
+
+.nav li:hover {
+    background-color: navy;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    display: block; 
+    height: 100%; 
+    display: flex; 
+    align-items: center; 
+}
+
+.ofertas{
+    background-color: darkred;
+}
+
+.pagar{
+    background-color: navy;
+}
+
+/*Secciones*/
+.secciones{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+/*SLIDER*/
+.slider {
+    width: 50%;
+    overflow: hidden;
+}
+
+.slider-container {
+    position: relative;
+}
+
+.slider-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider-track img {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.slider-prev, .slider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.3s ease, visibility 0.3s ease; 
+}
+
+.slider-prev {
+    left: 10px;
+}
+
+.slider-next {
+    right: 10px;
+}
+
+.slider-container:hover .slider-prev,
+.slider-container:hover .slider-next {
+    opacity: 1; 
+    visibility: visible; 
+}
+
+.slider-container {
+    position: relative; 
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    position: absolute; 
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+}
+
+.slider-dots button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ccc;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.slider-dots button.active {
+    background-color: yellow;
+}
+
+/*IMAGES*/
+
+.images {
+    width: 50%;
+    padding: 20px;
+}
+
+.image-row {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.image-row img {
+    width: 100%; 
+    height: auto;
+    object-fit: contain; 
+}
+
+/*SEPARADOR*/
+.section-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%; 
+}
+
+.title-line {
+    border: none;
+    border-top: 2px solid rgba(224, 224, 224, 0.7); 
+    width: 50%;
+    position: absolute;
+}
+
+.section-title h2 {
+    background-color: white; 
+    padding: 0 20px; 
+    color: #007bff;
+    font-size: 1.5em; 
+    z-index: 1; 
+}
+
+/*GRID*/
+.grid {
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    padding: 20px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.grid-item h2,
+.grid-item h3,
+.grid-item p {
+    flex-grow: 1;
+    margin: 5px 0;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    text-align: left; 
+}
+
+.product-info h2 {
+    font-size: 1.2em; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+}
+
+.product-info h3 {
+    font-size: 1em; 
+    margin-bottom: 5px;
+}
+
+.product-info p {
+    font-size: 1em; 
+    color: #007bff; 
+    margin-bottom: 0; 
+}
+
+.grid-item a{
+    text-decoration: none;
+    color:darkslategrey;
+}
+
+.grid-item a:hover{
+    text-decoration: none;
+    color:skyblue;
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: white; 
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+.footer-container {
+    width: 80%; 
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-prices {
+    margin-bottom: 10px;
+}
+
+.footer-prices h4{
+    color: blue; 
+}
+
+.footer-separator {
+    border: none;
+    border-top: 1px solid rgba(204, 204, 204, 0.5);
+    margin: 10px 0;
+}
+
+.footer-links {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: gray; 
+}
+
+.footer-links img {
+    width: 5%;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.footer-copyright {
+    font-size: 0.8em;
+    color: blue; 
+}
